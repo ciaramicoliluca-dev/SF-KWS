@@ -1,0 +1,29 @@
+{
+  "args": {
+    "model": "C:\\Users\\ciara\\Desktop\\STMCUBEMODEL\\ds_cnn_s_int8.tflite",
+    "valinput": "C:\\Users\\ciara\\Desktop\\STMCUBEMODEL\\test_inputs_only.npy",
+    "valoutput": "C:\\Users\\ciara\\Desktop\\STMCUBEMODEL\\test_outputs_expected.npy",
+    "mode": "target",
+    "name": "network",
+    "verbosity": 1,
+    "c-api": "st-ai",
+    "optimization": "balanced",
+    "target": "stm32f4",
+    "workspace": "C:\\Users\\ciara\\.stm32cubeaistudio\\workspace\\SF-KWS\\.ai\\run\\run-14\\.ai\\st_ai_ws",
+    "output": "C:\\Users\\ciara\\.stm32cubeaistudio\\workspace\\SF-KWS\\.ai\\run\\run-14\\.ai\\st_ai_output",
+    "memory-pool": "C:\\Users\\ciara\\.stm32cubeaistudio\\workspace\\SF-KWS\\.ai\\run\\run-14\\.ai\\mempools.json"
+  },
+  "mempools": [
+    {
+      "name": "RAM",
+      "size": 131072,
+      "offset": 536870912,
+      "driver": "RAM",
+      "max": 131072,
+      "mode_available": []
+    }
+  ],
+  "exportWeightsAsBin": false,
+  "copyWeightsToRam": false,
+  "automaticFlash": true
+}

@@ -1,0 +1,343 @@
+Generate Project
+Copying previous project files from C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-8 to C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-8\.ai\generate\backup
+Calculating memory footprint...
+Generating project for board undefined...
+Executing process: C:\Users\ciara\AppData\Local\Programs\STM32CubeMX\jre\bin\java.exe -jar C:\Users\ciara\AppData\Local\Programs\STM32CubeMX\STM32CubeMX.exe -q -s
+Executed command: config load "C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-8\STM32F446RET6.ioc"
+Executed command: project toolchain "STM32CubeIDE"
+Command not executed or already applied: set gpio parameters  GPIO_PuPd GPIO_PULLUP, error: Error: Command failed: set gpio parameters  GPIO_PuPd GPIO_PULLUP
+Command not executed or already applied: set pin  _RX, error: Error: Command failed: set pin  _RX
+Command not executed or already applied: set pin  _TX, error: Error: Command failed: set pin  _TX
+Command not executed or already applied: set mode  Asynchronous, error: Error: Command failed: set mode  Asynchronous
+Executed command: config save
+Command not executed or already applied: set ip parameters  BaudRate 115200, error: Error: Command failed: set ip parameters  BaudRate 115200
+Command not executed or already applied: set gpio parameters  GPIO_PuPd GPIO_PULLUP, error: Error: Command failed: set gpio parameters  GPIO_PuPd GPIO_PULLUP
+Executed command: project set heapsize 0x800
+Executed command: project set stacksize 0x2000
+Downloading https://sw-center.st.com/packs/resource/firmware/stm32cube_fw_f4_v1283.zip to C:\Users\ciara\STM32Cube\Repository\stm32cube_fw_f4_v1283.zip.tmp. This may take a while...
+C:\Users\ciara\STM32Cube\Repository\stm32cube_fw_f4_v1280.zip already exists... Skipping download...
+Extracting C:\Users\ciara\STM32Cube\Repository\stm32cube_fw_f4_v1280.zip into C:\Users\ciara\STM32Cube\Repository\STM32Cube_FW_F4_V1.28.3...
+5%: Extracting stm32cube_fw_f4_v1280.zip
+10%: Extracting stm32cube_fw_f4_v1280.zip
+15%: Extracting stm32cube_fw_f4_v1280.zip
+20%: Extracting stm32cube_fw_f4_v1280.zip
+25%: Extracting stm32cube_fw_f4_v1280.zip
+30%: Extracting stm32cube_fw_f4_v1280.zip
+35%: Extracting stm32cube_fw_f4_v1280.zip
+40%: Extracting stm32cube_fw_f4_v1280.zip
+Moving C:\Users\ciara\STM32Cube\Repository\stm32cube_fw_f4_v1283.zip.tmp to C:\Users\ciara\STM32Cube\Repository\stm32cube_fw_f4_v1283.zip
+45%: Extracting stm32cube_fw_f4_v1280.zip
+50%: Extracting stm32cube_fw_f4_v1280.zip
+55%: Extracting stm32cube_fw_f4_v1280.zip
+60%: Extracting stm32cube_fw_f4_v1280.zip
+65%: Extracting stm32cube_fw_f4_v1280.zip
+70%: Extracting stm32cube_fw_f4_v1280.zip
+75%: Extracting stm32cube_fw_f4_v1280.zip
+Extraction done in C:\Users\ciara\STM32Cube\Repository\STM32Cube_FW_F4_V1.28.3
+Extracting C:\Users\ciara\STM32Cube\Repository\stm32cube_fw_f4_v1283.zip into C:\Users\ciara\STM32Cube\Repository\STM32Cube_FW_F4_V1.28.3...
+5%: Extracting stm32cube_fw_f4_v1283.zip
+10%: Extracting stm32cube_fw_f4_v1283.zip
+15%: Extracting stm32cube_fw_f4_v1283.zip
+20%: Extracting stm32cube_fw_f4_v1283.zip
+25%: Extracting stm32cube_fw_f4_v1283.zip
+30%: Extracting stm32cube_fw_f4_v1283.zip
+35%: Extracting stm32cube_fw_f4_v1283.zip
+40%: Extracting stm32cube_fw_f4_v1283.zip
+45%: Extracting stm32cube_fw_f4_v1283.zip
+50%: Extracting stm32cube_fw_f4_v1283.zip
+55%: Extracting stm32cube_fw_f4_v1283.zip
+60%: Extracting stm32cube_fw_f4_v1283.zip
+65%: Extracting stm32cube_fw_f4_v1283.zip
+70%: Extracting stm32cube_fw_f4_v1283.zip
+75%: Extracting stm32cube_fw_f4_v1283.zip
+Extraction done in C:\Users\ciara\STM32Cube\Repository\STM32Cube_FW_F4_V1.28.3
+Generate project and exit.
+ If stuck here, please check STM32CubeMX opened dialog or Firmware Package.
+Executed command: config save
+Executed command: project toolchainlocation "."
+Executed command: project generate
+Adjusting memory area RAM for pool RAM perfect match of 131072 bytes
+Generating code...
+>>> C:\ST\STEdgeAI\4.0\Utilities\windows\stedgeai.exe generate --model C:\Users\ciara\Desktop\STMCUBEMODEL\ds_cnn_s_int8.tflite --valinput C:\Users\ciara\Desktop\STMCUBEMODEL\test_inputs_only.npy --valoutput C:\Users\ciara\Desktop\STMCUBEMODEL\test_outputs_expected.npy --mode target --name network --verbosity 1 --c-api st-ai --optimization balanced --target stm32f4 --workspace C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-8\.ai\st_ai_ws --output C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-8\.ai\st_ai_output --memory-pool C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-8\.ai\mempools.json
+ST Edge AI Core v4.0.1-20581 7ed50de05
+
+Creating c (debug) info json file C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-8\.ai\st_ai_output\network_c_info.json
+
+ Exec/report summary (generate)
+ ------------------------------------------------------------------------------------------------------------------------------
+ model file         :   C:\Users\ciara\Desktop\STMCUBEMODEL\ds_cnn_s_int8.tflite                                               
+ type               :   tflite                                                                                                 
+ c_name             :   network                                                                                                
+ compression        :   lossless                                                                                               
+ options            :   allocate-inputs, allocate-outputs, multi-heaps, use-lite-runtime, use-st-ai                            
+ optimization       :   balanced                                                                                               
+ target/series      :   stm32f4                                                                                                
+ memory pool        :   C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-8\.ai\mempools.json                     
+ workspace dir      :   C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-8\.ai\st_ai_ws                          
+ output dir         :   C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-8\.ai\st_ai_output                      
+ vinput files       :   C:\Users\ciara\Desktop\STMCUBEMODEL\test_inputs_only.npy                                               
+ voutput files      :   C:\Users\ciara\Desktop\STMCUBEMODEL\test_outputs_expected.npy                                          
+ model_fmt          :   ss/sa per channel                                                                                      
+ model_name         :   ds_cnn_s_int8                                                                                          
+ model_hash         :   0x90140552271e60922f67d2f5b5ca5c09                                                                     
+ params #           :   13,004 items (13.67 KiB)                                                                               
+ ------------------------------------------------------------------------------------------------------------------------------
+ input 1/1          :   'serving_default_mfcc_input0', int8(1x51x10x1), 510 Bytes, QLinear(2.172353506,51,int8), activations   
+ output 1/1         :   'nl_7', int8(1x12), 12 Bytes, QLinear(0.003906250,-128,int8), activations                              
+ macc               :   1,557,120                                                                                              
+ weights (ro)       :   14,000 B (13.67 KiB) (1 segment) / -38,016(-73.1%) vs float model                                      
+ activations (rw)   :   18,784 B (18.34 KiB) (1 segment) *                                                                     
+ ram (total)        :   18,784 B (18.34 KiB) = 18,784 + 0 + 0                                                                  
+ ------------------------------------------------------------------------------------------------------------------------------
+ (*) 'input'/'output' buffers are allocated in the activations buffer
+  Memory-pools summary (activations/ domain)
+  --------------- ---- ------------------------ --------- 
+  name            id   used                     buffer#   
+  --------------- ---- ------------------------ --------- 
+  RAM             0    18.34 KiB (14.3%)        18        
+  weights_array   1    13.67 KiB (1400000.0%)   12        
+  --------------- ---- ------------------------ ---------
+
+Computing AI RT data/code size (target=stm32f4)..
+
+ Requested memory size by section - "stm32f4" target
+ ------------------------------ -------- -------- ------ --------
+ module                             text   rodata   data      bss
+
+ ------------------------------ -------- -------- ------ --------
+ NetworkRuntime1201_CM4_GCC.a     21,980        0      0        0
+ network.o                         1,914    1,364    280       24
+ lib (toolchain)*                  1,652        0      0        0
+ ------------------------------ -------- -------- ------ --------
+ RT total**                       25,546    1,364    280       24
+ ------------------------------ -------- -------- ------ --------
+ weights                               0   14,000      0        0
+
+ activations                           0        0      0   18,784
+ states                                0        0      0        0
+ io                                    0        0      0        0
+ ------------------------------ -------- -------- ------ --------
+ TOTAL                            25,546   15,364    280   18,808
+
+ ------------------------------ -------- -------- ------ --------
+ *  toolchain objects (libm/libgcc*)
+ ** RT AI runtime objects (kernels+infrastructure)
+  Summary - "stm32f4" target
+  --------------------------------------------------
+
+               FLASH (ro)      %*   RAM (rw)      %
+  --------------------------------------------------
+  RT total         27,190   66.0%        304   1.6%
+  --------------------------------------------------
+  TOTAL            41,190             19,088
+
+  --------------------------------------------------
+  *  rt/total
+ Generated files (5)
+ -----------------------------------------------------------------------------------------------------
+ C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-8\.ai\st_ai_output\network_data.h
+ C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-8\.ai\st_ai_output\network_data.c
+
+ C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-8\.ai\st_ai_output\network.h
+ C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-8\.ai\st_ai_output\network.c
+ C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-8\.ai\st_ai_output\network_details.h
+
+Creating txt report file C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-8\.ai\st_ai_output\network_generate_report.txt
+
+elapsed time (GENERATE): 3.275s
+
+Compiling template bsp_ai.h.hbs...
+Compiling template app_config.h.hbs...
+Compiling template user_init.h.hbs...
+Compiling template user_init.c.hbs...
+Compiling template app_x-cube-ai.h.hbs...
+Compiling template app_x-cube-ai.c.hbs...
+Compiling template weights.h.hbs...
+Compiling template weights.c.hbs...
+Adding include line #include "app_x-cube-ai.h" to main.c
+Adding init function call STM32CubeAI_Studio_AI_Init(); to main.c
+Adding process function call STM32CubeAI_Studio_AI_Process(); to main.c
+Generate project done
+Create.
+
+Opening 'STM32F446RET6'.
+
+23:45:53 **** Build of configuration Release for project STM32F446RET6 ****
+
+make -j16 all 
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Validation/Src/aiPbIO.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/aiPbIO.d" -MT"Middlewares/ST/AI/Validation/Src/aiPbIO.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/aiPbIO.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Validation/Src/aiPbMemRWServices.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/aiPbMemRWServices.d" -MT"Middlewares/ST/AI/Validation/Src/aiPbMemRWServices.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/aiPbMemRWServices.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Validation/Src/aiPbMgr.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/aiPbMgr.d" -MT"Middlewares/ST/AI/Validation/Src/aiPbMgr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/aiPbMgr.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Validation/Src/aiValidation_ST_AI.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/aiValidation_ST_AI.d" -MT"Middlewares/ST/AI/Validation/Src/aiValidation_ST_AI.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/aiValidation_ST_AI.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Validation/Src/pb_common.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/pb_common.d" -MT"Middlewares/ST/AI/Validation/Src/pb_common.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/pb_common.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Validation/Src/pb_decode.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/pb_decode.d" -MT"Middlewares/ST/AI/Validation/Src/pb_decode.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/pb_decode.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Validation/Src/pb_encode.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/pb_encode.d" -MT"Middlewares/ST/AI/Validation/Src/pb_encode.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/pb_encode.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Validation/Src/stm32msg.pb.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/stm32msg.pb.d" -MT"Middlewares/ST/AI/Validation/Src/stm32msg.pb.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/stm32msg.pb.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Misc/Src/aiTestHelper_ST_AI.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Misc/Src/aiTestHelper_ST_AI.d" -MT"Middlewares/ST/AI/Misc/Src/aiTestHelper_ST_AI.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Misc/Src/aiTestHelper_ST_AI.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Misc/Src/aiTestUtility.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Misc/Src/aiTestUtility.d" -MT"Middlewares/ST/AI/Misc/Src/aiTestUtility.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Misc/Src/aiTestUtility.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Misc/Src/ai_device_adaptor.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Misc/Src/ai_device_adaptor.d" -MT"Middlewares/ST/AI/Misc/Src/ai_device_adaptor.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Misc/Src/ai_device_adaptor.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Misc/Src/lc_print.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Misc/Src/lc_print.d" -MT"Middlewares/ST/AI/Misc/Src/lc_print.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Misc/Src/lc_print.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Misc/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Misc/Src/syscalls.d" -MT"Middlewares/ST/AI/Misc/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Misc/Src/syscalls.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_cortex.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_dma.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_dma_ex.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_exti.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash_ex.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash_ramfunc.o"
+
+In file included from C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Misc/Src/ai_device_adaptor.c:19:
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h:655:8: error: unknown type name 'UART_HandleTypeDef'; did you mean 'DMA_HandleTypeDef'?
+
+  655 | extern UART_HandleTypeDef UartHandle;
+      |        ^~~~~~~~~~~~~~~~~~
+      |        DMA_HandleTypeDef
+In file included from ../../Middlewares/ST/AI/Misc/Inc/aiTestUtility.h:27,
+                 from C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Validation/Src/aiValidation_ST_AI.c:50:
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h:655:8: error: unknown type name 'UART_HandleTypeDef'; did you mean 'DMA_HandleTypeDef'?
+
+  655 | extern UART_HandleTypeDef UartHandle;
+      |        ^~~~~~~~~~~~~~~~~~
+      |        DMA_HandleTypeDef
+In file included from ../../Middlewares/ST/AI/Misc/Inc/aiTestUtility.h:27,
+
+                 from C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Validation/Src/aiPbIO.c:38:
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h:655:8: error: unknown type name 'UART_HandleTypeDef'; did you mean 'DMA_HandleTypeDef'?
+  655 | extern UART_HandleTypeDef UartHandle;
+      |        ^~~~~~~~~~~~~~~~~~
+      |        DMA_HandleTypeDef
+
+In file included from ../../Middlewares/ST/AI/Misc/Inc/aiTestUtility.h:27,
+                 from C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Misc/Src/aiTestUtility.c:81:
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h:655:8: error: unknown type name 'UART_HandleTypeDef'; did you mean 'DMA_HandleTypeDef'?
+
+  655 | extern UART_HandleTypeDef UartHandle;
+      |        ^~~~~~~~~~~~~~~~~~
+      |        DMA_HandleTypeDef
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h: In function 'port_io_get':
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h:664:12: error: implicit declaration of function 'HAL_UART_Receive' [-Wimplicit-function-declaration]
+  664 |   status = HAL_UART_Receive(&UartHandle, (uint8_t *)c, 1, timeout);
+
+      |            ^~~~~~~~~~~~~~~~
+In file included from ../../Middlewares/ST/AI/Misc/Inc/aiTestUtility.h:27,
+                 from C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Middlewares/ST/AI/Misc/Src/aiTestHelper_ST_AI.c:33:
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h:655:8: error: unknown type name 'UART_HandleTypeDef'; did you mean 'DMA_HandleTypeDef'?
+
+  655 | extern UART_HandleTypeDef UartHandle;
+      |        ^~~~~~~~~~~~~~~~~~
+      |        DMA_HandleTypeDef
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h: In function 'port_io_get':
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h:664:12: error: implicit declaration of function 'HAL_UART_Receive' [-Wimplicit-function-declaration]
+
+  664 |   status = HAL_UART_Receive(&UartHandle, (uint8_t *)c, 1, timeout);
+      |            ^~~~~~~~~~~~~~~~
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h: In function 'port_io_get':
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h:664:12: error: implicit declaration of function 'HAL_UART_Receive' [-Wimplicit-function-declaration]
+
+  664 |   status = HAL_UART_Receive(&UartHandle, (uint8_t *)c, 1, timeout);
+      |            ^~~~~~~~~~~~~~~~
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h: In function 'port_io_get':
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h:664:12: error: implicit declaration of function 'HAL_UART_Receive' [-Wimplicit-function-declaration]
+  664 |   status = HAL_UART_Receive(&UartHandle, (uint8_t *)c, 1, timeout);
+
+      |            ^~~~~~~~~~~~~~~~
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_gpio.o"
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h: In function 'port_io_write':
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h:676:12: error: implicit declaration of function 'HAL_UART_Transmit' [-Wimplicit-function-declaration]
+
+  676 |   status = HAL_UART_Transmit(&UartHandle, buff, count, HAL_MAX_DELAY);
+      |            ^~~~~~~~~~~~~~~~~
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h: In function 'port_io_write':
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h:676:12: error: implicit declaration of function 'HAL_UART_Transmit' [-Wimplicit-function-declaration]
+
+  676 |   status = HAL_UART_Transmit(&UartHandle, buff, count, HAL_MAX_DELAY);
+      |            ^~~~~~~~~~~~~~~~~
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h: In function 'port_io_write':
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h:676:12: error: implicit declaration of function 'HAL_UART_Transmit' [-Wimplicit-function-declaration]
+
+  676 |   status = HAL_UART_Transmit(&UartHandle, buff, count, HAL_MAX_DELAY);
+      |            ^~~~~~~~~~~~~~~~~
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h: In function 'port_io_write':
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h:676:12: error: implicit declaration of function 'HAL_UART_Transmit' [-Wimplicit-function-declaration]
+
+  676 |   status = HAL_UART_Transmit(&UartHandle, buff, count, HAL_MAX_DELAY);
+      |            ^~~~~~~~~~~~~~~~~
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h: In function 'port_io_get':
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h:664:12: error: implicit declaration of function 'HAL_UART_Receive' [-Wimplicit-function-declaration]
+  664 |   status = HAL_UART_Receive(&UartHandle, (uint8_t *)c, 1, timeout);
+      |            ^~~~~~~~~~~~~~~~
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS/.ai/run/run-8/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_pwr.o"
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h: In function 'port_io_write':
+
+../../Middlewares/ST/AI/Misc/Inc/ai_device_adaptor.h:676:12: error: implicit declaration of function 'HAL_UART_Transmit' [-Wimplicit-function-declaration]
+  676 |   status = HAL_UART_Transmit(&UartHandle, buff, count, HAL_MAX_DELAY);
+      |            ^~~~~~~~~~~~~~~~~
+
+make: *** [Middlewares/ST/AI/Validation/Src/subdir.mk:40: Middlewares/ST/AI/Validation/Src/aiPbIO.o] Error 1
+
+make: *** Waiting for unfinished jobs....
+make: *** [Middlewares/ST/AI/Misc/Src/subdir.mk:35: Middlewares/ST/AI/Misc/Src/ai_device_adaptor.o] Error 1
+
+make: *** [Middlewares/ST/AI/Validation/Src/subdir.mk:46: Middlewares/ST/AI/Validation/Src/aiValidation_ST_AI.o] Error 1
+
+make: *** [Middlewares/ST/AI/Misc/Src/subdir.mk:31: Middlewares/ST/AI/Misc/Src/aiTestHelper_ST_AI.o] Error 1
+
+make: *** [Middlewares/ST/AI/Misc/Src/subdir.mk:33: Middlewares/ST/AI/Misc/Src/aiTestUtility.o] Error 1
+
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+
+
+23:45:54 Build Failed. 21 errors, 0 warnings. (took 1s.566ms)
+
+
+Saving workspace.
+
+Run failed: Error: Build failed with 21 errors and 0 warnings.

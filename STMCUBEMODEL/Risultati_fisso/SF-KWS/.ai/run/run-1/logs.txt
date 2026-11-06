@@ -1,0 +1,35 @@
+>>> C:\ST\STEdgeAI\4.0\Utilities\windows\stedgeai.exe validate --model C:\Users\ciara\OneDrive - Università Politecnica delle Marche\Magistrale\2° Anno\Da fare\Digital Adaptive Circuits and Learning Systems\Codici\Project_Steps\ds_cnn_s_best.keras --valinput C:\Users\ciara\OneDrive - Università Politecnica delle Marche\Magistrale\2° Anno\Da fare\Digital Adaptive Circuits and Learning Systems\Features\val_features.npz --mode host --optimization balanced --name network --verbosity 1 --c-api st-ai --target stm32f4 --memory-pool C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-1\.ai\mempools.json --save-csv --workspace C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-1\.ai\st_ai_ws --output C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-1\.ai\st_ai_output
+usage: stedgeai --model FILE --target TARGET [--type keras|onnx|tflite]
+                [--name STR] [--compression none|lossless|low|medium|high]
+                [--allocate-inputs] [--allocate-outputs]
+                [--no-inputs-allocation] [--no-outputs-allocation]
+                [--input-memory-alignment INT] [--output-memory-alignment INT]
+                [--workspace DIR] [--output DIR] [--split-weights]
+                [--optimization OBJ] [--memory-pool FILE]
+                [--no-onnx-optimizer] [--use-onnx-simplifier]
+                [--fix-parametric-shapes FIX_PARAMETRIC_SHAPES]
+                [--input-data-type float32|int8|uint8]
+                [--output-data-type float32|int8|uint8]
+                [--inputs-ch-position chfirst|chlast]
+                [--outputs-ch-position chfirst|chlast]
+                [--prefetch-compressed-weights] [--custom FILE]
+                [--c-api st-ai|legacy] [--cut-input-tensors CUT_INPUT_TENSORS]
+                [--cut-output-tensors CUT_OUTPUT_TENSORS]
+                [--cut-input-layers CUT_INPUT_LAYERS]
+                [--cut-output-layers CUT_OUTPUT_LAYERS]
+                [--allocate-activations] [--allocate-states] [--hsp [HSP]]
+                [--st-neural-art [ST_NEURAL_ART]] [--binary] [--dll]
+                [--address ADDR] [--copy-weights-at ADDR]
+                [--relocatable [STR]] [--lib DIR] [--batch-size INT]
+                [--mode host|target|host-io-only|target-io-only] [--desc DESC]
+                [--val-json FILE] [--valinput FILE [FILE ...]]
+                [--valoutput FILE [FILE ...]] [--range MIN MAX [MIN MAX ...]]
+                [--full] [--io-only] [--save-csv] [--classifier] [--no-check]
+                [--no-exec-model] [--seed SEED] [--with-report] [--no-report]
+                [--no-workspace] [-h] [--version] [--tools-version]
+                [--verbosity [0|1|2|3]] [--quiet]
+                analyze|generate|validate|supported-ops
+
+stedgeai: error: argument --model/-m: "C:\Users\ciara\OneDrive - Universit\udce0 Politecnica delle Marche\Magistrale\2\udcb0 Anno\Da fare\Digital Adaptive Circuits and Learning Systems\Codici\Project_Steps\ds_cnn_s_best.keras" not existing regular file
+
+Run failed: Error: CInfo file not found after validate for C:\Users\ciara\OneDrive - Università Politecnica delle Marche\Magistrale\2° Anno\Da fare\Digital Adaptive Circuits and Learning Systems\Codici\Project_Steps\ds_cnn_s_best.keras

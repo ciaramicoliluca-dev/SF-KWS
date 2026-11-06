@@ -1,0 +1,6 @@
+{
+  "args": {
+    "model": "",
+    "target": "stm32f4"
+  }
+}

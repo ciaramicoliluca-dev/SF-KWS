@@ -1,0 +1,20 @@
+>>> C:\ST\STEdgeAI\4.0\Utilities\windows\stedgeai.exe validate --model C:\Users\ciara\Desktop\STMCUBEMODEL\ds_cnn_s_int8.tflite --valinput C:\Users\ciara\Desktop\STMCUBEMODEL\val_features.npz --mode host --name network --verbosity 1 --c-api st-ai --optimization balanced --target stm32f4 --memory-pool C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-3\.ai\mempools.json --save-csv --workspace C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-3\.ai\st_ai_ws --output C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-3\.ai\st_ai_output
+ST Edge AI Core v4.0.1-20581 7ed50de05
+
+Setting validation data...
+ loading file: C:\Users\ciara\Desktop\STMCUBEMODEL\val_features.npz
+
+  available entries: ['features', 'labels'] selector="None"
+
+   samples are reshaped: (4443, 51, 10) -> (4443, 51, 10, 1)
+
+INTERNAL ERROR: ufunc 'isinf' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+
+Run failed: Error: validate error: INTERNAL ERROR: ufunc 'isinf' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''. Please check the report for more details. Output: ST Edge AI Core v4.0.1-20581 7ed50de05
+PASS:   0%|          | 0/187 [00:00<?, ?it/s]                                                       Setting validation data...
+ loading file: C:\Users\ciara\Desktop\STMCUBEMODEL\val_features.npz
+  available entries: ['features', 'labels'] selector="None"
+                                                          samples are reshaped: (4443, 51, 10) -> (4443, 51, 10, 1)
+                                                       
+INTERNAL ERROR: ufunc 'isinf' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+ 

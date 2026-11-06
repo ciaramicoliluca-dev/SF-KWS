@@ -1,0 +1,2 @@
+Generate Project
+Copying previous project files from C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-4 to C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-4\.ai\generate\backup

@@ -1,0 +1,221 @@
+>>> C:\ST\STEdgeAI\4.0\Utilities\windows\stedgeai.exe validate --model C:\Users\ciara\Desktop\STMCUBEMODEL\ds_cnn_s_int8.tflite --valinput C:\Users\ciara\Desktop\STMCUBEMODEL\test_inputs_only.npy --valoutput C:\Users\ciara\Desktop\STMCUBEMODEL\test_outputs_expected.npy --mode host --name network --verbosity 1 --c-api st-ai --optimization balanced --target stm32f4 --memory-pool C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-7\.ai\mempools.json --save-csv --workspace C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-7\.ai\st_ai_ws --output C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-7\.ai\st_ai_output
+ST Edge AI Core v4.0.1-20581 7ed50de05
+
+Setting validation data...
+
+ loading file: C:\Users\ciara\Desktop\STMCUBEMODEL\test_inputs_only.npy
+
+ loading file: C:\Users\ciara\Desktop\STMCUBEMODEL\test_outputs_expected.npy
+
+   samples are reshaped: (4888, 12) -> (4888, 1, 1, 12)
+
+   I[1]: (4888, 51, 10, 1)/float32, min/max=[-448.658447, 187.330444], mean/std=[-10.483105, 57.555946]
+
+    c/I[1] conversion [Q(2.17235351,51)]-> (4888, 51, 10, 1)/int8, min/max=[-128, 127], mean/std=[46.175186, 26.488368]
+
+    m/I[1] conversion [Q(2.17235351,51)]-> (4888, 51, 10, 1)/int8, min/max=[-128, 127], mean/std=[46.175186, 26.488368]
+
+   O[1]: (4888, 1, 1, 12)/float32, min/max=[0.000000, 1.000000], mean/std=[0.083333, 0.276385]
+
+Creating c (debug) info json file C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-7\.ai\st_ai_output\network_c_info_valid.json
+
+Copying the AI runtime files to the user workspace: C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-7\.ai\st_ai_ws\inspector_network\workspace
+
+ from: C:\ST\STEdgeAI\4.0\Utilities\windows\targets\common\EmbedNets\tools\inspector\workspace
+
+ Exec/report summary (validate)
+ ------------------------------------------------------------------------------------------------------------------------------
+ model file         :   C:\Users\ciara\Desktop\STMCUBEMODEL\ds_cnn_s_int8.tflite                                               
+ type               :   tflite                                                                                                 
+ c_name             :   network                                                                                                
+ compression        :   lossless                                                                                               
+ options            :   allocate-inputs, allocate-outputs, multi-heaps, use-lite-runtime, use-st-ai                            
+ optimization       :   balanced                                                                                               
+ target/series      :   stm32f4                                                                                                
+ memory pool        :   C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-7\.ai\mempools.json                     
+ workspace dir      :   C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-7\.ai\st_ai_ws                          
+ output dir         :   C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-7\.ai\st_ai_output                      
+ vinput files       :   C:\Users\ciara\Desktop\STMCUBEMODEL\test_inputs_only.npy                                               
+ voutput files      :   C:\Users\ciara\Desktop\STMCUBEMODEL\test_outputs_expected.npy                                          
+ model_fmt          :   ss/sa per channel                                                                                      
+ model_name         :   ds_cnn_s_int8                                                                                          
+ model_hash         :   0x90140552271e60922f67d2f5b5ca5c09                                                                     
+ params #           :   13,004 items (13.67 KiB)                                                                               
+ ------------------------------------------------------------------------------------------------------------------------------
+ input 1/1          :   'serving_default_mfcc_input0', int8(1x51x10x1), 510 Bytes, QLinear(2.172353506,51,int8), activations   
+ output 1/1         :   'nl_7', int8(1x12), 12 Bytes, QLinear(0.003906250,-128,int8), activations                              
+ macc               :   1,557,120                                                                                              
+ weights (ro)       :   14,000 B (13.67 KiB) (1 segment) / -38,016(-73.1%) vs float model                                      
+ activations (rw)   :   18,784 B (18.34 KiB) (1 segment) *                                                                     
+ ram (total)        :   18,784 B (18.34 KiB) = 18,784 + 0 + 0                                                                  
+ ------------------------------------------------------------------------------------------------------------------------------
+ (*) 'input'/'output' buffers are allocated in the activations buffer
+  Memory-pools summary (activations/ domain)
+  --------------- ---- ------------------------ --------- 
+  name            id   used                     buffer#   
+  --------------- ---- ------------------------ --------- 
+  RAM             0    18.34 KiB (14.3%)        18        
+  weights_array   1    13.67 KiB (1400000.0%)   12        
+  --------------- ---- ------------------------ ---------
+
+Running the TFlite model...
+
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Running the ST.AI c-model (AI RUNNER)...(name=network, mode=HOST)
+
+ DLL Driver v2.0 - Direct Python binding (C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-7\.ai\st_ai_ws\inspector_network\workspace\lib\libai_network.dll) ['network']
+
+  Summary 'network' - ['network']
+  ----------------------------------------------------------------------------------------------------------
+  I[1/1] 'input_1'    :   int8[1,51,10,1], 510 Bytes, QLinear(2.172353506,51,int8), in activations buffer
+  O[1/1] 'output_1'   :   int8[1,12], 12 Bytes, QLinear(0.003906250,-128,int8), in activations buffer
+  n_nodes             :   10
+
+  activations         :   18784
+  weights             :   14000
+  macc                :   1557120
+  hash                :   0x90140552271e60922f67d2f5b5ca5c09
+  compile_datetime    :   Aug 31 2026 19:37:39
+
+  ----------------------------------------------------------------------------------------------------------
+  protocol            :   DLL Driver v2.0 - Direct Python binding
+  tools               :   ST.AI (st-ai api) v4.0.1
+  runtime lib         :   v12.0.1
+  capabilities        :   IO_ONLY, PER_LAYER, PER_LAYER_WITH_DATA
+  device.desc         :   AMD64, Intel64 Family 6 Model 167 Stepping 1, GenuineIntel, Windows
+
+  ----------------------------------------------------------------------------------------------------------
+
+ NOTE: The duration and execution time per layer are just indications. They depend on the host machine's workload.
+
+  ST.AI Profiling results v2.0 - "network"
+  ------------------------------------------------------------
+
+  nb sample(s)   :   4888
+  duration       :   0.819 ms by sample (0.722/3.399/0.128)
+  macc           :   1557120
+  ------------------------------------------------------------
+
+  Statistic per tensor
+  ---------------------------------------------------------------------------------
+  tensor   #      type[shape]:size       min   max       mean      std  name
+
+  ---------------------------------------------------------------------------------
+  I.0      4888   i8[1,51,10,1]:510     -128   127     46.175   26.488  input_1
+  O.0      4888   i8[1,12]:12           -128   127   -106.718   66.517  output_1
+  ---------------------------------------------------------------------------------
+
+Saving validation data...
+ output directory: C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-7\.ai\st_ai_output
+
+ creating C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-7\.ai\st_ai_output\network_val_io.npz
+
+ m_outputs_1: (4888, 12)/int8, min/max=[-128, 127], mean/std=[-106.717863, 66.517374], nl_7
+
+ c_outputs_1: (4888, 1, 1, 12)/int8, min/max=[-128, 127], mean/std=[-106.717846, 66.517434], scale=0.003906250 zp=-128, nl_7
+
+Computing the metrics...
+
+ Accuracy report #1 for the generated HOST C-model
+ ----------------------------------------------------------------------------------------------------
+ notes: - data type is different: r/float32 instead p/int8
+
+        - p/int8 data are dequantized with s=0.00390625 zp=-128
+        - computed against the provided ground truth values
+        - 4888 samples (12 items per sample)
+  acc=92.37% rmse=0.094344452 mae=0.017609559 l2r=0.345826030 mean=0.000200 std=0.094345 snr=9.713860 nse=0.883482 cos=0.945087
+
+  Confusion matrix (axis=-1) - 12 classes (4888 samples)
+  --------------------------------------------------------------------
+  C0       410   .    1    2    1    .    .    .    .    .    5    .
+  C1        .   366   .   12    8    .    .    .    1   10    8    .
+  C2        .    .   388   1    2    .   14    6    3    2    9    .
+
+  C3        2   12    .   361   1    .    3    .    2   13   12    .
+  C4       12    .    2    .   391   1    .    .    .    1    5    .
+  C5        .    .    .    2    6   368   3    .    .    3   14    .
+  C6        .    .    6    7    .    2   371   2    .    .    8    .
+
+  C7        1    .   11    .    2    .    7   363   .    8   10    .
+  C8        .    .    3    3    .    .    2    2   396   1    4    .
+  C9        .   14    5   17    3    1    .    .    .   349  13    .
+  C10       2   10    4    8    4    4   11    .    .   19   345   .
+  C11       .    .    .    .    .    .    .    .    .    .    .   407
+
+ Accuracy report #1 for the reference model
+ ----------------------------------------------------------------------------------------------------
+ notes: - data type is different: r/float32 instead p/int8
+
+        - p/int8 data are dequantized with s=0.00390625 zp=-128
+        - computed against the provided ground truth values
+        - 4888 samples (12 items per sample)
+  acc=92.37% rmse=0.094344452 mae=0.017609624 l2r=0.345826358 mean=0.000200 std=0.094345 snr=9.713860 nse=0.883482 cos=0.945087
+  Confusion matrix (axis=-1) - 12 classes (4888 samples)
+
+  --------------------------------------------------------------------
+  C0       410   .    1    2    1    .    .    .    .    .    5    .
+  C1        .   366   .   12    8    .    .    .    1   10    8    .
+  C2        .    .   388   1    2    .   14    6    3    2    9    .
+  C3        2   12    .   361   1    .    3    .    2   13   12    .
+  C4       12    .    2    .   391   1    .    .    .    1    5    .
+  C5        .    .    .    2    6   368   3    .    .    3   14    .
+
+  C6        .    .    6    7    .    2   371   2    .    .    8    .
+  C7        1    .   11    .    2    .    7   363   .    8   10    .
+  C8        .    .    3    3    .    .    2    2   396   1    4    .
+  C9        .   14    5   17    3    1    .    .    .   349  13    .
+  C10       2   10    4    8    4    4   11    .    .   19   345   .
+  C11       .    .    .    .    .    .    .    .    .    .    .   407
+
+ Cross accuracy report #1 (reference vs C-model)
+ ----------------------------------------------------------------------------------------------------
+
+ notes: - r/int8 data are dequantized with s=0.00390625 zp=-128
+        - p/int8 data are dequantized with s=0.00390625 zp=-128
+        - the output of the reference model is used as ground truth/reference value
+        - 4888 samples (12 items per sample)
+
+  acc=100.00% rmse=0.000016129 mae=0.000000067 l2r=0.000059121 mean=-0.000000 std=0.000016 snr=84.565086 nse=1.000000 cos=1.000000
+  Confusion matrix (axis=-1) - 12 classes (4888 samples)
+
+  --------------------------------------------------------------------
+  C0       427   .    .    .    .    .    .    .    .    .    .    .
+  C1        .   402   .    .    .    .    .    .    .    .    .    .
+  C2        .    .   420   .    .    .    .    .    .    .    .    .
+  C3        .    .    .   413   .    .    .    .    .    .    .    .
+  C4        .    .    .    .   418   .    .    .    .    .    .    .
+
+  C5        .    .    .    .    .   376   .    .    .    .    .    .
+  C6        .    .    .    .    .    .   411   .    .    .    .    .
+  C7        .    .    .    .    .    .    .   373   .    .    .    .
+  C8        .    .    .    .    .    .    .    .   402   .    .    .
+  C9        .    .    .    .    .    .    .    .    .   406   .    .
+  C10       .    .    .    .    .    .    .    .    .    .   433   .
+
+  C11       .    .    .    .    .    .    .    .    .    .    .   407
+
+ Evaluation report (summary)
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Output              acc       rmse          mae           l2r           mean        std        snr         nse        cos        tensor
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ HOST c-model #1     92.37%    0.094344452   0.017609559   0.345826030   0.000200    0.094345   9.713860    0.883482   0.945087   'nl_7', 4888 x int8(1x12), m_id=[7]
+ original model #1   92.37%    0.094344452   0.017609624   0.345826358   0.000200    0.094345   9.713860    0.883482   0.945087   'nl_7', 4888 x int8(1x12), m_id=[7]
+ X-cross #1          100.00%   0.000016129   0.000000067   0.000059121   -0.000000   0.000016   84.565086   1.000000   1.000000   'nl_7', 4888 x int8(1x12), m_id=[7]
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  acc  : Accuracy (class, axis=-1)
+
+  rmse : Root Mean Squared Error
+  mae  : Mean Absolute Error
+  l2r  : L2 relative error
+  mean : Mean error
+  std  : Standard deviation error
+  snr  : Signal-to-Noise Ratio (SNR), bigger is better
+  nse  : Nash-Sutcliffe efficiency criteria, bigger is better, best=1, range=(-inf, 1]
+  cos  : COsine Similarity, bigger is better, best=1, range=(0, 1]
+
+Creating txt report file C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS\.ai\run\run-7\.ai\st_ai_output\network_validate_report.txt
+
+elapsed time (VALIDATE): 14.154s
+

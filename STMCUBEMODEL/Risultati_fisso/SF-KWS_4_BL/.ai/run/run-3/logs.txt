@@ -1,0 +1,454 @@
+Generate Project
+Copying previous project files from C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3 to C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\generate\backup
+Calculating memory footprint...
+Generating project for board undefined...
+Executing process: C:\Users\ciara\AppData\Local\Programs\STM32CubeMX\jre\bin\java.exe -jar C:\Users\ciara\AppData\Local\Programs\STM32CubeMX\STM32CubeMX.exe -q -s
+Executed command: config load "C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\STM32F446RET6.ioc"
+Executed command: project toolchain "STM32CubeIDE"
+Command not executed or already applied: set gpio parameters PA3 GPIO_PuPd GPIO_PULLUP, error: Error: Command failed: set gpio parameters PA3 GPIO_PuPd GPIO_PULLUP
+Executed command: set pin PA3 USART2_RX
+Executed command: set pin PA2 USART2_TX
+Executed command: set mode USART2 Asynchronous
+Executed command: config save
+Executed command: set ip parameters USART2 BaudRate 115200
+Executed command: set gpio parameters PA3 GPIO_PuPd GPIO_PULLUP
+Executed command: project set heapsize 0x800
+Executed command: project set stacksize 0x2000
+C:\Users\ciara\STM32Cube\Repository\STM32Cube_FW_F4_V1.28.3 already exists... Skipping installation...
+Generate project and exit.
+ If stuck here, please check STM32CubeMX opened dialog or Firmware Package.
+Executed command: config save
+Executed command: project toolchainlocation "."
+Executed command: project generate
+Adjusting memory area RAM for pool RAM perfect match of 131072 bytes
+Generating code...
+>>> C:\ST\STEdgeAI\4.0\Utilities\windows\stedgeai.exe generate --model C:\Users\ciara\Desktop\STMCUBEMODEL\Heavier_Model\ds_cnn_s_int8.tflite --valinput C:\Users\ciara\Desktop\STMCUBEMODEL\test_inputs_only.npy --valoutput C:\Users\ciara\Desktop\STMCUBEMODEL\test_outputs_expected.npy --mode target --name network --verbosity 1 --c-api st-ai --optimization balanced --target stm32f4 --workspace C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_ws --output C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_output --memory-pool C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\mempools.json
+ST Edge AI Core v4.0.1-20581 7ed50de05
+
+Creating c (debug) info json file C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_output\network_c_info.json
+
+ Exec/report summary (generate)
+ ------------------------------------------------------------------------------------------------------------------------------
+ model file         :   C:\Users\ciara\Desktop\STMCUBEMODEL\Heavier_Model\ds_cnn_s_int8.tflite                                 
+ type               :   tflite                                                                                                 
+ c_name             :   network                                                                                                
+ compression        :   lossless                                                                                               
+ options            :   allocate-inputs, allocate-outputs, multi-heaps, use-lite-runtime, use-st-ai                            
+ optimization       :   balanced                                                                                               
+ target/series      :   stm32f4                                                                                                
+ memory pool        :   C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\mempools.json                
+ workspace dir      :   C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_ws                     
+ output dir         :   C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_output                 
+ vinput files       :   C:\Users\ciara\Desktop\STMCUBEMODEL\test_inputs_only.npy                                               
+ voutput files      :   C:\Users\ciara\Desktop\STMCUBEMODEL\test_outputs_expected.npy                                          
+ model_fmt          :   ss/sa per channel                                                                                      
+ model_name         :   ds_cnn_s_int8                                                                                          
+ model_hash         :   0x18b0b10f370990c81ac0ae69c7b63af7                                                                     
+ params #           :   22,604 items (23.80 KiB)                                                                               
+ ------------------------------------------------------------------------------------------------------------------------------
+ input 1/1          :   'serving_default_mfcc_input0', int8(1x51x10x1), 510 Bytes, QLinear(2.172353506,51,int8), activations   
+ output 1/1         :   'nl_11', int8(1x12), 12 Bytes, QLinear(0.003906250,-128,int8), activations                             
+ macc               :   2,772,096                                                                                              
+ weights (ro)       :   24,368 B (23.80 KiB) (1 segment) / -66,048(-73.0%) vs float model                                      
+ activations (rw)   :   18,784 B (18.34 KiB) (1 segment) *                                                                     
+ ram (total)        :   18,784 B (18.34 KiB) = 18,784 + 0 + 0                                                                  
+ ------------------------------------------------------------------------------------------------------------------------------
+ (*) 'input'/'output' buffers are allocated in the activations buffer
+  Memory-pools summary (activations/ domain)
+  --------------- ---- ------------------------ --------- 
+  name            id   used                     buffer#   
+  --------------- ---- ------------------------ --------- 
+  RAM             0    18.34 KiB (14.3%)        28        
+  weights_array   1    23.80 KiB (2436800.0%)   20        
+  --------------- ---- ------------------------ ---------
+
+Computing AI RT data/code size (target=stm32f4)..
+
+ Requested memory size by section - "stm32f4" target
+ ------------------------------ -------- -------- ------ --------
+ module                             text   rodata   data      bss
+ ------------------------------ -------- -------- ------ --------
+
+ NetworkRuntime1201_CM4_GCC.a     21,980        0      0        0
+ network.o                         2,726    2,390    280       24
+ lib (toolchain)*                  1,652        0      0        0
+ ------------------------------ -------- -------- ------ --------
+ RT total**                       26,358    2,390    280       24
+ ------------------------------ -------- -------- ------ --------
+ weights                               0   24,368      0        0
+
+ activations                           0        0      0   18,784
+ states                                0        0      0        0
+ io                                    0        0      0        0
+ ------------------------------ -------- -------- ------ --------
+ TOTAL                            26,358   26,758    280   18,808
+ ------------------------------ -------- -------- ------ --------
+
+ *  toolchain objects (libm/libgcc*)
+ ** RT AI runtime objects (kernels+infrastructure)
+  Summary - "stm32f4" target
+  --------------------------------------------------
+               FLASH (ro)      %*   RAM (rw)      %
+
+  --------------------------------------------------
+  RT total         29,028   54.4%        304   1.6%
+  --------------------------------------------------
+  TOTAL            53,396             19,088
+  --------------------------------------------------
+  *  rt/total
+
+ Generated files (5)
+ ----------------------------------------------------------------------------------------------------------
+ C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_output\network_data.h
+ C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_output\network_data.c
+
+ C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_output\network.h
+ C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_output\network.c
+ C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_output\network_details.h
+
+Creating txt report file C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_output\network_generate_report.txt
+
+elapsed time (GENERATE): 3.346s
+
+Compiling template bsp_ai.h.hbs...
+Compiling template app_config.h.hbs...
+Compiling template user_init.h.hbs...
+Compiling template user_init.c.hbs...
+Compiling template app_x-cube-ai.h.hbs...
+Compiling template app_x-cube-ai.c.hbs...
+Compiling template weights.h.hbs...
+Compiling template weights.c.hbs...
+Removing static from USART Init in main.c
+Adding include line #include "app_x-cube-ai.h" to main.c
+Adding init function call STM32CubeAI_Studio_AI_Init(); to main.c
+Adding process function call STM32CubeAI_Studio_AI_Process(); to main.c
+Generate project done
+Create.
+
+Opening 'STM32F446RET6'.
+
+21:29:30 **** Build of configuration Release for project STM32F446RET6 ****
+
+make -j16 all 
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Middlewares/ST/AI/Validation/Src/aiPbIO.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/aiPbIO.d" -MT"Middlewares/ST/AI/Validation/Src/aiPbIO.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/aiPbIO.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Middlewares/ST/AI/Validation/Src/aiPbMemRWServices.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/aiPbMemRWServices.d" -MT"Middlewares/ST/AI/Validation/Src/aiPbMemRWServices.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/aiPbMemRWServices.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Middlewares/ST/AI/Validation/Src/aiPbMgr.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/aiPbMgr.d" -MT"Middlewares/ST/AI/Validation/Src/aiPbMgr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/aiPbMgr.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Middlewares/ST/AI/Validation/Src/aiValidation_ST_AI.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/aiValidation_ST_AI.d" -MT"Middlewares/ST/AI/Validation/Src/aiValidation_ST_AI.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/aiValidation_ST_AI.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Middlewares/ST/AI/Validation/Src/pb_common.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/pb_common.d" -MT"Middlewares/ST/AI/Validation/Src/pb_common.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/pb_common.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Middlewares/ST/AI/Validation/Src/pb_decode.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/pb_decode.d" -MT"Middlewares/ST/AI/Validation/Src/pb_decode.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/pb_decode.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Middlewares/ST/AI/Validation/Src/pb_encode.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/pb_encode.d" -MT"Middlewares/ST/AI/Validation/Src/pb_encode.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/pb_encode.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Middlewares/ST/AI/Validation/Src/stm32msg.pb.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/stm32msg.pb.d" -MT"Middlewares/ST/AI/Validation/Src/stm32msg.pb.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/stm32msg.pb.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Middlewares/ST/AI/Misc/Src/aiTestHelper_ST_AI.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Misc/Src/aiTestHelper_ST_AI.d" -MT"Middlewares/ST/AI/Misc/Src/aiTestHelper_ST_AI.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Misc/Src/aiTestHelper_ST_AI.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Middlewares/ST/AI/Misc/Src/aiTestUtility.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Misc/Src/aiTestUtility.d" -MT"Middlewares/ST/AI/Misc/Src/aiTestUtility.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Misc/Src/aiTestUtility.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Middlewares/ST/AI/Misc/Src/ai_device_adaptor.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Misc/Src/ai_device_adaptor.d" -MT"Middlewares/ST/AI/Misc/Src/ai_device_adaptor.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Misc/Src/ai_device_adaptor.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Middlewares/ST/AI/Misc/Src/lc_print.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Misc/Src/lc_print.d" -MT"Middlewares/ST/AI/Misc/Src/lc_print.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Misc/Src/lc_print.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Middlewares/ST/AI/Misc/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/AI/Misc/Src/syscalls.d" -MT"Middlewares/ST/AI/Misc/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Misc/Src/syscalls.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_cortex.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_dma.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_dma_ex.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_exti.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash_ex.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_flash_ramfunc.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_gpio.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_pwr.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_pwr_ex.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_rcc.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_rcc_ex.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/stm32f4xx_hal_uart.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/CMSIS/system_stm32f4xx.d" -MT"Drivers/CMSIS/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/CMSIS/system_stm32f4xx.o"
+
+arm-none-eabi-gcc -mcpu=cortex-m4 -c -x assembler-with-cpp -MMD -MP -MF"Application/User/Startup/startup_stm32f446retx.d" -MT"Application/User/Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/Startup/startup_stm32f446retx.o" "../Application/User/Startup/startup_stm32f446retx.s"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/Core/main.d" -MT"Application/User/Core/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/Core/main.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/Core/stm32f4xx_hal_msp.d" -MT"Application/User/Core/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/Core/stm32f4xx_hal_msp.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/Core/stm32f4xx_it.d" -MT"Application/User/Core/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/Core/stm32f4xx_it.o"
+
+arm-none-eabi-gcc "../Application/User/Core/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/Core/syscalls.d" -MT"Application/User/Core/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/Core/syscalls.o"
+
+arm-none-eabi-gcc "../Application/User/Core/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/Core/sysmem.d" -MT"Application/User/Core/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/User/Core/sysmem.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/AI/App/app_x-cube-ai.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"AI/App/app_x-cube-ai.d" -MT"AI/App/app_x-cube-ai.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "AI/App/app_x-cube-ai.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/AI/App/network.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"AI/App/network.d" -MT"AI/App/network.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "AI/App/network.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/AI/App/network_data.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"AI/App/network_data.d" -MT"AI/App/network_data.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "AI/App/network_data.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/AI/App/network_weights.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"AI/App/network_weights.d" -MT"AI/App/network_weights.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "AI/App/network_weights.o"
+
+arm-none-eabi-gcc "C:/Users/ciara/.stm32cubeaistudio/workspace/SF-KWS_4_BL/.ai/run/run-3/AI/App/user_init.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -DHAVE_NETWORK_INFO -c -I../../Core/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/ST/AI/Inc -I../../Middlewares/ST/AI/Misc/Inc -I../../Middlewares/ST/AI/Validation/Inc -I../../Middlewares/ST/AI/Misc/Src -I../../Middlewares/ST/AI/Validation/Src -I../../AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"AI/App/user_init.d" -MT"AI/App/user_init.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "AI/App/user_init.o"
+
+arm-none-eabi-gcc -o "STM32F446RET6.elf" @"objects.list"  -l:NetworkRuntime1201_CM4_GCC.a -mcpu=cortex-m4 -T"C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\STM32CubeIDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F446RET6.map" -Wl,--gc-sections -static -L../../Middlewares/ST/AI/Lib --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+
+Finished building target: STM32F446RET6.elf
+
+arm-none-eabi-size  STM32F446RET6.elf 
+
+arm-none-eabi-objdump -h -S STM32F446RET6.elf  > "STM32F446RET6.list"
+
+   text	   data	    bss	    dec	    hex	filename
+
+  81292	    672	  30736	 112700	  1b83c	STM32F446RET6.elf
+
+Finished building: default.size.stdout
+
+Finished building: STM32F446RET6.list
+
+
+21:29:33 Build Finished. 0 errors, 0 warnings. (took 3s.14ms)
+
+
+Saving workspace.
+
+      -------------------------------------------------------------------
+                       STM32CubeProgrammer v2.23.0                  
+      -------------------------------------------------------------------
+
+
+ST-LINK SN  : 0674FF555054877567051119
+ST-LINK FW  : V2J31M21
+
+Board       : NUCLEO-F446RE
+
+Voltage     : 3.23V
+
+SWD freq    : 4000 KHz
+Connect mode: Under Reset
+Reset mode  : Hardware reset
+
+Device ID   : 0x421
+
+Revision ID : Rev A
+
+Device name : STM32F446xx
+
+NVM size    : 512 KBytes
+
+Device type : MCU
+Device CPU  : Cortex-M4
+
+BL Version  : 0x90
+
+
+
+Opening and parsing file: STM32F446RET6.elf
+
+
+
+Memory Programming ...
+  File          : STM32F446RET6.elf
+
+  Size          : 80.05 KB 
+  Address       : 0x08000000
+
+Erasing memory corresponding to segment 0:
+
+Erasing internal memory sectors [0 4]
+
+Download in Progress:
+
+
+
+File download complete
+Time elapsed during download operation: 00:00:02.395
+
+
+RUNNING Program ... 
+  Address:      : 0x8000000
+
+Application is running, Please Hold on...
+Start operation achieved successfully
+
+Flashing completed
+Device is ready on port COM13
+>>> C:\ST\STEdgeAI\4.0\Utilities\windows\stedgeai.exe validate --model C:\Users\ciara\Desktop\STMCUBEMODEL\Heavier_Model\ds_cnn_s_int8.tflite --valinput C:\Users\ciara\Desktop\STMCUBEMODEL\test_inputs_only.npy --valoutput C:\Users\ciara\Desktop\STMCUBEMODEL\test_outputs_expected.npy --mode target --name network --verbosity 1 --c-api st-ai --optimization balanced --target stm32f4 --workspace C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_ws --output C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_output --memory-pool C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\mempools.json --desc serial:COM13:115200 --save-csv
+ST Edge AI Core v4.0.1-20581 7ed50de05
+
+Setting validation data...
+ loading file: C:\Users\ciara\Desktop\STMCUBEMODEL\test_inputs_only.npy
+
+ loading file: C:\Users\ciara\Desktop\STMCUBEMODEL\test_outputs_expected.npy
+
+   samples are reshaped: (4888, 12) -> (4888, 1, 1, 12)
+
+   I[1]: (4888, 51, 10, 1)/float32, min/max=[-448.658447, 187.330444], mean/std=[-10.483105, 57.555946]
+
+    c/I[1] conversion [Q(2.17235351,51)]-> (4888, 51, 10, 1)/int8, min/max=[-128, 127], mean/std=[46.175186, 26.488368]
+
+    m/I[1] conversion [Q(2.17235351,51)]-> (4888, 51, 10, 1)/int8, min/max=[-128, 127], mean/std=[46.175186, 26.488368]
+
+   O[1]: (4888, 1, 1, 12)/float32, min/max=[0.000000, 1.000000], mean/std=[0.083333, 0.276385]
+
+Creating c (debug) info json file C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_output\network_c_info_valid.json
+
+ Exec/report summary (validate)
+ ------------------------------------------------------------------------------------------------------------------------------
+ model file         :   C:\Users\ciara\Desktop\STMCUBEMODEL\Heavier_Model\ds_cnn_s_int8.tflite                                 
+ type               :   tflite                                                                                                 
+ c_name             :   network                                                                                                
+ compression        :   lossless                                                                                               
+ options            :   allocate-inputs, allocate-outputs, multi-heaps, use-lite-runtime, use-st-ai                            
+ optimization       :   balanced                                                                                               
+ target/series      :   stm32f4                                                                                                
+ memory pool        :   C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\mempools.json                
+ workspace dir      :   C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_ws                     
+ output dir         :   C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_output                 
+ vinput files       :   C:\Users\ciara\Desktop\STMCUBEMODEL\test_inputs_only.npy                                               
+ voutput files      :   C:\Users\ciara\Desktop\STMCUBEMODEL\test_outputs_expected.npy                                          
+ model_fmt          :   ss/sa per channel                                                                                      
+ model_name         :   ds_cnn_s_int8                                                                                          
+ model_hash         :   0x18b0b10f370990c81ac0ae69c7b63af7                                                                     
+ params #           :   22,604 items (23.80 KiB)                                                                               
+ ------------------------------------------------------------------------------------------------------------------------------
+ input 1/1          :   'serving_default_mfcc_input0', int8(1x51x10x1), 510 Bytes, QLinear(2.172353506,51,int8), activations   
+ output 1/1         :   'nl_11', int8(1x12), 12 Bytes, QLinear(0.003906250,-128,int8), activations                             
+ macc               :   2,772,096                                                                                              
+ weights (ro)       :   24,368 B (23.80 KiB) (1 segment) / -66,048(-73.0%) vs float model                                      
+ activations (rw)   :   18,784 B (18.34 KiB) (1 segment) *                                                                     
+ ram (total)        :   18,784 B (18.34 KiB) = 18,784 + 0 + 0                                                                  
+ ------------------------------------------------------------------------------------------------------------------------------
+ (*) 'input'/'output' buffers are allocated in the activations buffer
+  Memory-pools summary (activations/ domain)
+  --------------- ---- ------------------------ --------- 
+  name            id   used                     buffer#   
+  --------------- ---- ------------------------ --------- 
+  RAM             0    18.34 KiB (14.3%)        28        
+  weights_array   1    23.80 KiB (2436800.0%)   20        
+  --------------- ---- ------------------------ ---------
+
+Running the TFlite model...
+
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Running the ST.AI c-model (AI RUNNER)...(name=network, mode=TARGET)
+
+ Proto-buffer driver v2.1 (msg v3.2) (Serial driver v1.0 - COM13:115200) ['network']
+
+  Summary 'network' - ['network']
+  --------------------------------------------------------------------------------------------------
+  I[1/1] 'input_1'    :   int8[1,51,10,1], 510 Bytes, QLinear(2.172353506,51,int8), activations
+  O[1/1] 'output_1'   :   int8[1,12], 12 Bytes, QLinear(0.003906250,-128,int8), activations
+
+  n_nodes             :   10
+  activations         :   18784
+  weights             :   14000
+  macc                :   1557120
+  hash                :   0x90140552271e60922f67d2f5b5ca5c09
+  compile_datetime    :   Sep 14 2026 00:52:46
+
+  --------------------------------------------------------------------------------------------------
+  protocol            :   Proto-buffer driver v2.1 (msg v3.2) (Serial driver v1.0 - COM13:115200)
+  tools               :   ST.AI (st-ai api) v4.0.1
+  runtime lib         :   v12.0.1-92efada9 compiled with GCC 13.3.1 (GCC)
+  capabilities        :   IO_ONLY, PER_LAYER, PER_LAYER_WITH_DATA
+  device.desc         :   stm32 family - 0x421 - STM32F446 @180/180MHz
+
+  device.attrs        :   fpu,art_lat=5,art_prefetch,art_icache,art_dcache
+  --------------------------------------------------------------------------------------------------
+
+E200(ValidationError): Signature of the "network" C-model signature is not coherent
+ macc #: 1557120 expected 2772096
+ weights: 14000 expected 24368
+
+Run failed: Error: validate error: E200(ValidationError): Signature of the "network" C-model signature is not coherent. Please check the report for more details. Output: ST Edge AI Core v4.0.1-20581 7ed50de05
+PASS:   0%|          | 0/187 [00:00<?, ?it/s]Setting validation data...
+ loading file: C:\Users\ciara\Desktop\STMCUBEMODEL\test_inputs_only.npy
+                                                         loading file: C:\Users\ciara\Desktop\STMCUBEMODEL\test_outputs_expected.npy
+                                                           samples are reshaped: (4888, 12) -> (4888, 1, 1, 12)
+                                                           I[1]: (4888, 51, 10, 1)/float32, min/max=[-448.658447, 187.330444], mean/std=[-10.483105, 57.555946]
+                                                            c/I[1] conversion [Q(2.17235351,51)]-> (4888, 51, 10, 1)/int8, min/max=[-128, 127], mean/std=[46.175186, 26.488368]
+                                                            m/I[1] conversion [Q(2.17235351,51)]-> (4888, 51, 10, 1)/int8, min/max=[-128, 127], mean/std=[46.175186, 26.488368]
+   O[1]: (4888, 1, 1, 12)/float32, min/max=[0.000000, 1.000000], mean/std=[0.083333, 0.276385]
+                                                        Creating c (debug) info json file C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_output\network_c_info_valid.json
+                                                        Exec/report summary (validate)
+ ------------------------------------------------------------------------------------------------------------------------------
+ model file         :   C:\Users\ciara\Desktop\STMCUBEMODEL\Heavier_Model\ds_cnn_s_int8.tflite                                 
+ type               :   tflite                                                                                                 
+ c_name             :   network                                                                                                
+ compression        :   lossless                                                                                               
+ options            :   allocate-inputs, allocate-outputs, multi-heaps, use-lite-runtime, use-st-ai                            
+ optimization       :   balanced                                                                                               
+ target/series      :   stm32f4                                                                                                
+ memory pool        :   C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\mempools.json                
+ workspace dir      :   C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_ws                     
+ output dir         :   C:\Users\ciara\.stm32cubeaistudio\workspace\SF-KWS_4_BL\.ai\run\run-3\.ai\st_ai_output                 
+ vinput files       :   C:\Users\ciara\Desktop\STMCUBEMODEL\test_inputs_only.npy                                               
+ voutput files      :   C:\Users\ciara\Desktop\STMCUBEMODEL\test_outputs_expected.npy                                          
+ model_fmt          :   ss/sa per channel                                                                                      
+ model_name         :   ds_cnn_s_int8                                                                                          
+ model_hash         :   0x18b0b10f370990c81ac0ae69c7b63af7                                                                     
+ params #           :   22,604 items (23.80 KiB)                                                                               
+ ------------------------------------------------------------------------------------------------------------------------------
+ input 1/1          :   'serving_default_mfcc_input0', int8(1x51x10x1), 510 Bytes, QLinear(2.172353506,51,int8), activations   
+ output 1/1         :   'nl_11', int8(1x12), 12 Bytes, QLinear(0.003906250,-128,int8), activations                             
+ macc               :   2,772,096                                                                                              
+ weights (ro)       :   24,368 B (23.80 KiB) (1 segment) / -66,048(-73.0%) vs float model                                      
+ activations (rw)   :   18,784 B (18.34 KiB) (1 segment) *                                                                     
+ ram (total)        :   18,784 B (18.34 KiB) = 18,784 + 0 + 0                                                                  
+ ------------------------------------------------------------------------------------------------------------------------------
+ (*) 'input'/'output' buffers are allocated in the activations buffer
+  Memory-pools summary (activations/ domain)
+  --------------- ---- ------------------------ --------- 
+  name            id   used                     buffer#   
+  --------------- ---- ------------------------ --------- 
+  RAM             0    18.34 KiB (14.3%)        28        
+  weights_array   1    23.80 KiB (2436800.0%)   20        
+  --------------- ---- ------------------------ ---------
+                                                       Running the TFlite model...
+                                                       Running the ST.AI c-model (AI RUNNER)...(name=network, mode=TARGET)
+                                                        Proto-buffer driver v2.1 (msg v3.2) (Serial driver v1.0 - COM13:115200) ['network']
+  Summary 'network' - ['network']
+  --------------------------------------------------------------------------------------------------
+  I[1/1] 'input_1'    :   int8[1,51,10,1], 510 Bytes, QLinear(2.172353506,51,int8), activations
+  O[1/1] 'output_1'   :   int8[1,12], 12 Bytes, QLinear(0.003906250,-128,int8), activations
+  n_nodes             :   10
+  activations         :   18784
+  weights             :   14000
+  macc                :   1557120
+  hash                :   0x90140552271e60922f67d2f5b5ca5c09
+  compile_datetime    :   Sep 14 2026 00:52:46
+  --------------------------------------------------------------------------------------------------
+  protocol            :   Proto-buffer driver v2.1 (msg v3.2) (Serial driver v1.0 - COM13:115200)
+  tools               :   ST.AI (st-ai api) v4.0.1
+  runtime lib         :   v12.0.1-92efada9 compiled with GCC 13.3.1 (GCC)
+  capabilities        :   IO_ONLY, PER_LAYER, PER_LAYER_WITH_DATA
+  device.desc         :   stm32 family - 0x421 - STM32F446 @180/180MHz
+  device.attrs        :   fpu,art_lat=5,art_prefetch,art_icache,art_dcache
+  --------------------------------------------------------------------------------------------------
+
+E200(ValidationError): Signature of the "network" C-model signature is not coherent
+ macc #: 1557120 expected 2772096
+ weights: 14000 expected 24368
+ INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+

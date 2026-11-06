@@ -1,0 +1,25 @@
+{
+  "args": {
+    "model": "C:\\Users\\ciara\\Desktop\\STMCUBEMODEL\\ds_cnn_s_int8.tflite",
+    "valinput": "C:\\Users\\ciara\\Desktop\\STMCUBEMODEL\\val_features.npz",
+    "valoutput": "",
+    "mode": "host",
+    "name": "network",
+    "verbosity": 1,
+    "c-api": "st-ai",
+    "optimization": "balanced"
+  },
+  "mempools": [
+    {
+      "name": "RAM",
+      "size": 131072,
+      "offset": 536870912,
+      "driver": "RAM",
+      "max": 131072,
+      "mode_available": []
+    }
+  ],
+  "exportWeightsAsBin": false,
+  "copyWeightsToRam": false,
+  "automaticFlash": true
+}

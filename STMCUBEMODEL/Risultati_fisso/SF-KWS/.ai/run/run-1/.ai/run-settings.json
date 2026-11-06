@@ -1,0 +1,27 @@
+{
+  "args": {
+    "model": "C:\\Users\\ciara\\OneDrive - Università Politecnica delle Marche\\Magistrale\\2° Anno\\Da fare\\Digital Adaptive Circuits and Learning Systems\\Codici\\Project_Steps\\ds_cnn_s_best.keras",
+    "valinput": "C:\\Users\\ciara\\OneDrive - Università Politecnica delle Marche\\Magistrale\\2° Anno\\Da fare\\Digital Adaptive Circuits and Learning Systems\\Features\\val_features.npz",
+    "valoutput": "",
+    "mode": "host",
+    "optimization": "balanced",
+    "name": "network",
+    "verbosity": 1,
+    "c-api": "st-ai",
+    "target": "stm32f4",
+    "memory-pool": "C:\\Users\\ciara\\.stm32cubeaistudio\\workspace\\SF-KWS\\.ai\\run\\run-1\\.ai\\mempools.json"
+  },
+  "mempools": [
+    {
+      "name": "RAM",
+      "size": 131072,
+      "offset": 536870912,
+      "driver": "RAM",
+      "max": 131072,
+      "mode_available": []
+    }
+  ],
+  "exportWeightsAsBin": false,
+  "copyWeightsToRam": false,
+  "automaticFlash": true
+}
